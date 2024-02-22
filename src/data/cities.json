@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "city": "Amsterdam",
+    "image": "https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg"
+  },
+  {
+    "id": 2,
+    "city": "Barcelona",
+    "image": "https://cdn.pixabay.com/photo/2020/05/18/22/17/travel-5188598_1280.jpg"
+  },
+  {
+    "id": 3,
+    "city": "Berlin",
+    "image": "https://cdn.pixabay.com/photo/2020/05/01/15/18/brand-front-of-the-brandenburg-gate-5117579_1280.jpg"
+  },
+  {
+    "id": 4,
+    "city": "Kyiv",
+    "image": "https://cdn.pixabay.com/photo/2022/04/08/21/04/buildings-7120297_1280.jpg"
+  },
+  {
+    "id": 5,
+    "city": "London",
+    "image": "https://cdn.pixabay.com/photo/2017/06/11/18/03/big-ben-2393098_1280.jpg"
+  },
+
+  {
+    "id": 6,
+    "city": "Paris",
+    "image": "https://cdn.pixabay.com/photo/2018/04/25/09/26/eiffel-tower-3349075_1280.jpg"
+  },
+  {
+    "id": 7,
+    "city": "Tokyo",
+    "image": "https://cdn.pixabay.com/photo/2013/11/25/09/47/buildings-217878_1280.jpg"
+  }
+]

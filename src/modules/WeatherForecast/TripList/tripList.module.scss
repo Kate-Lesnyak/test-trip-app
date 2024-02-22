@@ -1,0 +1,33 @@
+.list {
+	display: flex;
+	gap: 24px;
+	overflow-x: scroll;
+	padding-bottom: 20px;
+
+	&::-webkit-scrollbar {
+		width: 10px;
+		height: 6px;
+		border-radius: 12px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 12px;
+		background-color: var(--bg-color);
+		transition: background-color var(--transition-duration-function);
+	}
+
+	&::-webkit-scrollbar-thumb:hover {
+		background-color: var(--secondary-light-color);
+	}
+}
+.arrowLeft,
+.arrowRight {
+	font-size: 24px;
+	color: var(--secondary-light-color);
+	margin-top: 70px;
+	cursor: pointer;
+
+	&:hover {
+		color: var(--accent-color);
+	}
+}

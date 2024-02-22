@@ -1,0 +1,21 @@
+.wrap {
+	display: flex;
+	gap: 100px;
+}
+
+.boxTripList {
+	display: flex;
+	gap: 40px;
+	margin-bottom: 60px;
+}
+
+.boxInformation {
+	display: flex;
+	flex-direction: column;
+	gap: 70px;
+	padding: 16px;
+	width: 300px;
+	min-height: 100%;
+	color: var(--primary-white-color);
+	background-color: var(--secondary-accent-color);
+}

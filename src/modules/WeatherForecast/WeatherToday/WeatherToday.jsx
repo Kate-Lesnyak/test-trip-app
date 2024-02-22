@@ -1,0 +1,42 @@
+import { icons } from "../../../data/icons";
+
+import styles from "./weatherToday.module.scss";
+
+function WeatherToday({ searchWeatherToday }) {
+  const { address, days } = searchWeatherToday;
+  let data = {};
+  if (days) {
+    data = days[0];
+  }
+  const datetime = data?.icon;
+  const icon = data?.icon;
+  const temp = data?.temp;
+  const iconChoiced = icons.find((el) => el.iconName === icon);
+
+  console.log(iconChoiced);
+
+  console.log("searchWeatherToday in WeatherToday >>>> address", address);
+  console.log("searchWeatherToday in WeatherToday >>>> days", days);
+  console.log("searchWeatherToday in WeatherToday >>>> data", data);
+
+  return (
+    <div>
+      <div className={styles.avatar}></div>
+      <div className={styles.dayWeek}>Sunday{datetime}</div>
+      <div className={styles.thumb}>
+        <img src={iconChoiced?.iconSrc} alt={icon} width={70} height={70} />
+        <div className={styles.temp}>
+          {Math.round(temp)}
+          {/* 24 */}
+        </div>
+        <div className={styles.celsii}>
+          <span>°</span>
+          <span>C</span>
+        </div>
+      </div>
+      <p className={styles.address}>{address}Berlin</p>
+    </div>
+  );
+}
+
+export default WeatherToday;

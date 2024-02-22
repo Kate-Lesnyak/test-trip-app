@@ -1,0 +1,16 @@
+[
+  {
+    "address": "Kyiv",
+    "resolvedAddress": "Київ, Україна",
+    "days": [
+      {
+        "datetime": "2024-02-17",
+        "tempmax": 2.7,
+        "tempmin": -0.1,
+        "temp": 1.2,
+        "preciptype": ["rain", "snow"],
+        "icon": "rain"
+      }
+    ]
+  }
+]

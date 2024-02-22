@@ -1,0 +1,29 @@
+@import "../../../shared/styles/mixins";
+
+.btn {
+	display: inline-block;
+	@include font();
+	min-width: 100px;
+	background-color: transparent;
+	color: inherit;
+	border: 1px solid var(--bg-color);
+	padding: 8px 12px;
+	border-radius: 4px;
+	cursor: pointer;
+	outline: none;
+
+	transition:
+		color var(--transition-duration-function),
+		background-color var(--transition-duration-function),
+		border-color var(--transition-duration-function);
+
+	&:hover {
+		background: var(--accent-color);
+		color: var(--primary-white-color);
+		border-color: transparent;
+	}
+
+	&:focus {
+		border-color: var(--accent-color);
+	}
+}

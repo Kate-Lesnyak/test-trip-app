@@ -1,0 +1,53 @@
+.item {
+	position: relative;
+	border: 1px solid var(--card-border-color);
+	transition: box-shadow, var(--transition-duration-function);
+	cursor: pointer;
+	&:hover {
+		box-shadow: var(--card-shadow);
+	}
+}
+
+.thumb {
+	height: 150px;
+	width: 150px;
+}
+
+.thumb > img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.info {
+	padding: 10px;
+}
+
+.city {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.date {
+	font-size: 8px;
+	color: var(--secondary-light-color);
+}
+
+.btnDelete {
+	position: absolute;
+	bottom: 4px;
+	right: 4px;
+	border-radius: 50%;
+	color: var(--secondary-color);
+	border: 1px solid var(--secondary-color);
+	transition-property: color, border-color;
+	transition: color var(--transition-duration-function) border-color var(--transition-duration-function);
+	cursor: pointer;
+}
+
+.btnDelete:hover,
+.btnDelete:focus {
+	color: var(--accent-color);
+	border-color: var(--accent-color);
+}
