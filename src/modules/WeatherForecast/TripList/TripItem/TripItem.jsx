@@ -1,4 +1,7 @@
 import { IoCloseOutline } from "react-icons/io5";
+import { formatDateQuery } from "../../../../shared/services/formatDateQuery";
+import { formatDate } from "../../../../shared/services/formatDate";
+
 import cities from "../../../../data/cities.json";
 
 import styles from "./tripItem.module.scss";
@@ -12,6 +15,9 @@ function TripItem({
   onGetWeatherEveryDay,
   onDeleteTrip,
 }) {
+  const formatedStart = formatDate(start);
+  const formatedEnd = formatDate(end);
+
   return (
     <li
       className={styles.item}
@@ -31,7 +37,7 @@ function TripItem({
       </div>
       <div className={styles.info}>
         <p className={styles.city}>{city}</p>
-        <p className={styles.date}>{`${start} - ${end}`}</p>
+        <p className={styles.date}>{`${formatedStart} - ${formatedEnd}`}</p>
       </div>
     </li>
   );

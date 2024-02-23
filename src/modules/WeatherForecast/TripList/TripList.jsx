@@ -7,13 +7,11 @@ import styles from "./tripList.module.scss";
 
 function TripList({
   trips,
-  tripItem,
   onGetWeatherToday,
   onGetWeatherEveryDay,
   onDeleteTrip,
 }) {
   const tripListRef = useRef(null);
-  console.log("TripsList==>", trips); // приходит объект
 
   const handleScrollLeft = () => {
     tripListRef.current.scrollBy({

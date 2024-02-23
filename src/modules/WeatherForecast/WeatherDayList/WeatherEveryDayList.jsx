@@ -3,8 +3,15 @@ import WeatherDayItem from "./WeatherDayItem";
 import styles from "./weatherEveryDayList.module.scss";
 
 function WeatherEveryDayList({ weatherEveryDay }) {
-  const elements = weatherEveryDay?.map(({ ...props }) => (
-    <WeatherDayItem key={nanoid()} {...props} />
+  console.log(
+    "weatherEveryDay in WeatherEveryDayList >>>>> weatherEveryDay  ",
+    weatherEveryDay
+  );
+  const { days } = weatherEveryDay;
+  console.log("weatherEveryDay in WeatherEveryDayList >>>>> DAYS  ", days);
+
+  const elements = days?.map((day) => (
+    <WeatherDayItem key={nanoid()} props={day} />
   ));
 
   return (

@@ -30,12 +30,13 @@ const initialValue = [
     end: "2024-03-07",
   },
 ];
+
 function WeatherForecast() {
   const [trips, setTrips] = useState(() =>
     getInitialValue("my-trips", initialValue)
   );
   const [searchWeatherToday, setSearchWeatherToday] = useState({});
-  const [weatherEveryDay, setWeatherEveryDay] = useState([]);
+  const [weatherEveryDay, setWeatherEveryDay] = useState({});
 
   const [filter, setFilter] = useState(false);
 
@@ -66,7 +67,7 @@ function WeatherForecast() {
         setIsLoading(true);
         const data = await getTrip(city, startDate, endDate);
         console.log("data from useEffect fetchTrip =====>>", data);
-        setWeatherEveryDay(data.days);
+        setWeatherEveryDay(data);
       } catch ({ response }) {
         const errorMessage =
           response.data.message || Notify.failure("Can not fetch trips");
@@ -77,7 +78,7 @@ function WeatherForecast() {
     };
 
     fetchTrip();
-  }, [city, startDate, endDate]);
+  }, [city, startDate, endDate, weatherEveryDay]);
 
   useEffect(() => {
     if (!city) {
@@ -144,10 +145,10 @@ function WeatherForecast() {
   };
 
   const onGetWeatherEveryDay = (city, start, end) => {
-    console.log("Функция onGetWeather EveryDay ==>", city, start, end);
     setCity(city);
     setStartDate(start);
     setEndDate(end);
+    console.log("Функция onGetWeather EveryDay ==>", city, start, end);
   };
 
   const handleFilter = ({ target }) => setFilter(target.value);
@@ -160,8 +161,6 @@ function WeatherForecast() {
     const result = trips.filter((trip) =>
       trip.city.toLowerCase().includes(normalizedFilter)
     );
-
-    console.log("result", result);
     return result;
   };
 
